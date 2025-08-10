@@ -27,6 +27,17 @@ pnpm install
 ```
 This installs everything for all packages/apps
 
+## Build libraries
+
+- packages/lib-contracts
+```bash 
+pnpm --filter @acme/lib-contracts build
+```
+- packages/lib-db
+```bash 
+pnpm --filter @acme/lib-db build
+```
+
 ## Environment variables
 
 ### apps/omdb-backend-api:
