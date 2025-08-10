@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { makeApp } from './server';
 import { PrismaDb } from './db/prisma-db';
 import { ImportLogRepo } from './db/import-log-repo';
-import {PrismaClient} from "@prisma/client";
+import { PrismaClient } from '@prisma/client';
 
 if (!process.env.OMDB_BACKEND_URL) {
     throw new Error('OMDB_BACKEND_URL is required');

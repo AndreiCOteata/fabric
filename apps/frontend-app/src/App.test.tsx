@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { test, expect } from 'vitest';
 import App from './App';
-import {delay, http, HttpResponse} from 'msw';
+import { delay, http, HttpResponse } from 'msw';
 import { server } from './test/testServer.ts';
 
 test('clicking Matrix loads one result', async () => {
