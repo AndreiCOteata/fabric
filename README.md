@@ -64,14 +64,15 @@ REFRESH_TIME_MS=3600000
 *REFRESH_TIME_MS* controls when backend-api will re-fetch from omdb-backend (1h by default).
 
 ## Database (Prisma + SQLite)
+This creates/updates dev.db and generates Prisma Client:
 ```bash
 cd apps/backend-api
 pnpm prisma generate
 pnpm prisma migrate dev --name init
 ```
-This creates/updates dev.db and generates Prisma Client.
-```angular2html
+
 To reset during dev:
+```bash
 rm apps/backend-api/prisma/dev.db && pnpm --filter backend-api prisma migrate dev --name init
 ```
 
