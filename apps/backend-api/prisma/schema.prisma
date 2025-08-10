@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+
+model Movie {
+  id        Int      @id @default(autoincrement())
+  imdbID    String   @unique
+  updatedAt DateTime @default(now())
+  posterId  Int?
+  poster    Poster?  @relation(fields: [posterId], references: [id])
+  title     String
+  year      String
+  type      String
+}
+
+model Poster {
+  id      Int    @id @default(autoincrement())
+  url     String @unique
+  movies  Movie[]
+}
+
+model ImportLog {
+  id        Int      @id @default(autoincrement())
+  query     String   @unique
+  fetchedAt DateTime @default(now())
+}

@@ -1,0 +1,28 @@
+{
+  "name": "backend-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json && prisma generate",
+    "start": "node dist/index.js",
+    "prisma": "prisma",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@acme/lib-contracts": "workspace:*",
+    "@acme/lib-db": "workspace:*",
+    "@prisma/client": "^6.13.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^24.2.1",
+    "dotenv": "^16.4.5",
+    "prisma": "^6.13.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
