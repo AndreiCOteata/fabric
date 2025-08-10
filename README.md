@@ -122,8 +122,8 @@ pnpm --filter frontend-app test
 ```bash
 pnpm --filter frontend-app test:watch
 ```
-- Uses Vitest + Reach Testing Library
-- MSW (Mock Service Worker) moks */api/fetch/* so no servers are required
+- Uses Vitest + React Testing Library
+- MSW (Mock Service Worker) mocks */api/fetch/* so no servers are required
 - Test env is jsdom
 
 Front-of-house test file examples live in apps/frontend-app/src/*.test.tsx.
